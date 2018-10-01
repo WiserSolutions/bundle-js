@@ -1,0 +1,425 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`defaultConfig creates a custom config 1`] = `
+Object {
+  "context": "/path/to/pkg/client/src",
+  "devtool": "inline-source-map",
+  "entry": Array [
+    "@babel/polyfill",
+    "./app.js",
+    "./libs.js",
+  ],
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "loader": "babel-loader",
+        "test": /\\\\\\.js\\$/,
+      },
+      Object {
+        "test": /\\\\\\.css\\$/,
+        "use": Array [
+          "style-loader",
+          "css-loader",
+        ],
+      },
+      Object {
+        "test": /\\\\\\.less\\$/,
+        "use": Array [
+          Object {
+            "loader": "style-loader",
+          },
+          Object {
+            "loader": "css-loader",
+          },
+          Object {
+            "loader": "less-loader",
+            "options": Object {
+              "modifyVars": Object {
+                "primaryColor": "indigo",
+              },
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.svg\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+          },
+          Object {
+            "loader": "react-svg-loader",
+            "options": Object {
+              "svgo": Object {
+                "floatPrecision": 2,
+                "plugins": Array [
+                  Object {
+                    "removeTitle": false,
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.jpe\\?g\\$\\|\\\\\\.gif\\$\\|\\\\\\.png\\$\\|\\\\\\.wav\\$\\|\\\\\\.mp3\\|\\\\\\.woff\\$\\|\\\\\\.woff2\\$\\|\\\\\\.otf\\$\\|\\\\\\.eot\\$\\|\\\\\\.ttf\\$/,
+        "use": Array [
+          Object {
+            "loader": "url-loader",
+            "options": Object {
+              "limit": 25000,
+              "name": "[path][name].[hash].[ext]",
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "optimization": Object {
+    "minimizer": Array [
+      UglifyJsPlugin {
+        "options": Object {
+          "cache": false,
+          "cacheKeys": [Function],
+          "exclude": undefined,
+          "extractComments": false,
+          "include": undefined,
+          "minify": undefined,
+          "parallel": false,
+          "sourceMap": false,
+          "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+          "uglifyOptions": Object {
+            "ecma": 6,
+            "output": Object {
+              "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/i,
+            },
+          },
+          "warningsFilter": [Function],
+        },
+      },
+    ],
+  },
+  "output": Object {
+    "filename": "bundle.js",
+    "path": "/path/to/pkg/build",
+  },
+  "plugins": Array [
+    DefinePlugin {
+      "definitions": Object {
+        "__MODE__": "\\"development\\"",
+        "__THEME__": "{\\"primaryColor\\":\\"indigo\\"}",
+      },
+    },
+    LiveReloadPlugin {
+      "delay": 0,
+      "hostname": "\\" + location.hostname + \\"",
+      "ignore": null,
+      "lastChildHashes": Array [],
+      "lastHash": null,
+      "options": Object {
+        "appendScriptTag": true,
+      },
+      "port": 35729,
+      "protocol": "",
+      "quiet": false,
+      "server": null,
+    },
+    Object {
+      "custom": "webpack plugin",
+    },
+  ],
+  "watch": true,
+  "watchOptions": Object {
+    "ignored": Array [
+      "node_modules",
+      "cypress",
+      "/path/to/pkg/build/**/*",
+    ],
+  },
+}
+`;
+
+exports[`defaultConfig creates default development config 1`] = `
+Object {
+  "context": "/path/to/pkg/src",
+  "devtool": "inline-source-map",
+  "entry": Array [
+    "@babel/polyfill",
+    "./index.js",
+  ],
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "loader": "babel-loader",
+        "test": /\\\\\\.js\\$/,
+      },
+      Object {
+        "test": /\\\\\\.css\\$/,
+        "use": Array [
+          "style-loader",
+          "css-loader",
+        ],
+      },
+      Object {
+        "test": /\\\\\\.less\\$/,
+        "use": Array [
+          Object {
+            "loader": "style-loader",
+          },
+          Object {
+            "loader": "css-loader",
+          },
+          Object {
+            "loader": "less-loader",
+            "options": Object {},
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.svg\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+          },
+          Object {
+            "loader": "react-svg-loader",
+            "options": Object {
+              "svgo": Object {
+                "floatPrecision": 2,
+                "plugins": Array [
+                  Object {
+                    "removeTitle": false,
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.jpe\\?g\\$\\|\\\\\\.gif\\$\\|\\\\\\.png\\$\\|\\\\\\.wav\\$\\|\\\\\\.mp3\\|\\\\\\.woff\\$\\|\\\\\\.woff2\\$\\|\\\\\\.otf\\$\\|\\\\\\.eot\\$\\|\\\\\\.ttf\\$/,
+        "use": Array [
+          Object {
+            "loader": "url-loader",
+            "options": Object {
+              "limit": 25000,
+              "name": "[path][name].[hash].[ext]",
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "optimization": Object {
+    "minimizer": Array [
+      UglifyJsPlugin {
+        "options": Object {
+          "cache": false,
+          "cacheKeys": [Function],
+          "exclude": undefined,
+          "extractComments": false,
+          "include": undefined,
+          "minify": undefined,
+          "parallel": false,
+          "sourceMap": false,
+          "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+          "uglifyOptions": Object {
+            "ecma": 6,
+            "output": Object {
+              "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/i,
+            },
+          },
+          "warningsFilter": [Function],
+        },
+      },
+    ],
+  },
+  "output": Object {
+    "filename": "bundle.js",
+    "path": "/path/to/pkg/dist",
+  },
+  "plugins": Array [
+    DefinePlugin {
+      "definitions": Object {
+        "__MODE__": "\\"development\\"",
+      },
+    },
+    Object {
+      "isFirstBuild": true,
+      "lastBuildSucceeded": false,
+      "options": Object {
+        "alwaysNotify": true,
+      },
+    },
+    LiveReloadPlugin {
+      "delay": 0,
+      "hostname": "\\" + location.hostname + \\"",
+      "ignore": null,
+      "lastChildHashes": Array [],
+      "lastHash": null,
+      "options": Object {
+        "appendScriptTag": true,
+      },
+      "port": 35729,
+      "protocol": "",
+      "quiet": false,
+      "server": null,
+    },
+  ],
+  "watch": true,
+  "watchOptions": Object {
+    "ignored": Array [
+      "node_modules",
+      "cypress",
+      "/path/to/pkg/dist/**/*",
+    ],
+  },
+}
+`;
+
+exports[`defaultConfig creates default production config 1`] = `
+Object {
+  "context": "/path/to/pkg/src",
+  "devtool": undefined,
+  "entry": Array [
+    "@babel/polyfill",
+    "./index.js",
+  ],
+  "mode": "production",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "loader": "babel-loader",
+        "test": /\\\\\\.js\\$/,
+      },
+      Object {
+        "test": /\\\\\\.css\\$/,
+        "use": Array [
+          "style-loader",
+          "css-loader",
+        ],
+      },
+      Object {
+        "test": /\\\\\\.less\\$/,
+        "use": Array [
+          Object {
+            "loader": "style-loader",
+          },
+          Object {
+            "loader": "css-loader",
+          },
+          Object {
+            "loader": "less-loader",
+            "options": Object {},
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.svg\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+          },
+          Object {
+            "loader": "react-svg-loader",
+            "options": Object {
+              "svgo": Object {
+                "floatPrecision": 2,
+                "plugins": Array [
+                  Object {
+                    "removeTitle": false,
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.jpe\\?g\\$\\|\\\\\\.gif\\$\\|\\\\\\.png\\$\\|\\\\\\.wav\\$\\|\\\\\\.mp3\\|\\\\\\.woff\\$\\|\\\\\\.woff2\\$\\|\\\\\\.otf\\$\\|\\\\\\.eot\\$\\|\\\\\\.ttf\\$/,
+        "use": Array [
+          Object {
+            "loader": "url-loader",
+            "options": Object {
+              "limit": 25000,
+              "name": "[path][name].[hash].[ext]",
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "optimization": Object {
+    "minimizer": Array [
+      UglifyJsPlugin {
+        "options": Object {
+          "cache": false,
+          "cacheKeys": [Function],
+          "exclude": undefined,
+          "extractComments": false,
+          "include": undefined,
+          "minify": undefined,
+          "parallel": false,
+          "sourceMap": false,
+          "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+          "uglifyOptions": Object {
+            "ecma": 6,
+            "output": Object {
+              "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/i,
+            },
+          },
+          "warningsFilter": [Function],
+        },
+      },
+    ],
+  },
+  "output": Object {
+    "filename": "bundle-[hash].js",
+    "path": "/path/to/pkg/dist",
+  },
+  "plugins": Array [
+    DefinePlugin {
+      "definitions": Object {
+        "__MODE__": "\\"production\\"",
+      },
+    },
+    Object {
+      "isFirstBuild": true,
+      "lastBuildSucceeded": false,
+      "options": Object {
+        "alwaysNotify": true,
+      },
+    },
+    CompressionPlugin {
+      "options": Object {
+        "algorithm": [Function],
+        "cache": false,
+        "compressionOptions": Object {
+          "level": 9,
+        },
+        "deleteOriginalAssets": false,
+        "exclude": undefined,
+        "filename": "[path].gz[query]",
+        "include": undefined,
+        "minRatio": 0.8,
+        "test": undefined,
+        "threshold": 0,
+      },
+    },
+  ],
+  "watch": false,
+  "watchOptions": Object {
+    "ignored": Array [
+      "node_modules",
+      "cypress",
+      "/path/to/pkg/dist/**/*",
+    ],
+  },
+}
+`;

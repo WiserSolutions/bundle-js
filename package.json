@@ -37,6 +37,14 @@
     "prettier": "^1.14.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0"
+    "@babel/polyfill": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "compression-webpack-plugin": "^2.0.0",
+    "lodash.flatten": "^4.4.0",
+    "lodash.mapvalues": "^4.6.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.20.2",
+    "webpack-livereload-plugin": "^2.1.1",
+    "webpack-notifier": "^1.6.0"
   }
 }

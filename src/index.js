@@ -1,1 +1,5 @@
-// TODO: put your module entry point here
+const defaultConfig = require('./defaultConfig')
+
+module.exports = {
+  defaultConfig
+}
