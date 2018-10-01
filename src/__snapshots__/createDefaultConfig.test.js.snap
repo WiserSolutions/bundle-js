@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`defaultConfig creates a custom config 1`] = `
+exports[`createDefaultConfig creates a custom config 1`] = `
 Object {
   "context": "/path/to/pkg/client/src",
   "devtool": "inline-source-map",
@@ -113,6 +113,26 @@ Object {
         "__THEME__": "{\\"primaryColor\\":\\"indigo\\"}",
       },
     },
+    HtmlWebpackPlugin {
+      "options": Object {
+        "cache": true,
+        "chunks": "all",
+        "chunksSortMode": "auto",
+        "compile": true,
+        "excludeChunks": Array [],
+        "favicon": false,
+        "filename": "index.html",
+        "hash": false,
+        "inject": true,
+        "meta": Object {},
+        "minify": false,
+        "showErrors": true,
+        "template": "/Users/jankonopasek/Documents/repos/bundle-js/src/index.html.ejs",
+        "templateParameters": [Function],
+        "title": "Webpack App",
+        "xhtml": false,
+      },
+    },
     LiveReloadPlugin {
       "delay": 0,
       "hostname": "\\" + location.hostname + \\"",
@@ -142,7 +162,7 @@ Object {
 }
 `;
 
-exports[`defaultConfig creates default development config 1`] = `
+exports[`createDefaultConfig creates default development config 1`] = `
 Object {
   "context": "/path/to/pkg/src",
   "devtool": "inline-source-map",
@@ -249,6 +269,26 @@ Object {
         "__MODE__": "\\"development\\"",
       },
     },
+    HtmlWebpackPlugin {
+      "options": Object {
+        "cache": true,
+        "chunks": "all",
+        "chunksSortMode": "auto",
+        "compile": true,
+        "excludeChunks": Array [],
+        "favicon": false,
+        "filename": "index.html",
+        "hash": false,
+        "inject": true,
+        "meta": Object {},
+        "minify": false,
+        "showErrors": true,
+        "template": "/Users/jankonopasek/Documents/repos/bundle-js/src/index.html.ejs",
+        "templateParameters": [Function],
+        "title": "Webpack App",
+        "xhtml": false,
+      },
+    },
     Object {
       "isFirstBuild": true,
       "lastBuildSucceeded": false,
@@ -282,7 +322,7 @@ Object {
 }
 `;
 
-exports[`defaultConfig creates default production config 1`] = `
+exports[`createDefaultConfig creates default production config 1`] = `
 Object {
   "context": "/path/to/pkg/src",
   "devtool": undefined,
@@ -387,6 +427,26 @@ Object {
     DefinePlugin {
       "definitions": Object {
         "__MODE__": "\\"production\\"",
+      },
+    },
+    HtmlWebpackPlugin {
+      "options": Object {
+        "cache": true,
+        "chunks": "all",
+        "chunksSortMode": "auto",
+        "compile": true,
+        "excludeChunks": Array [],
+        "favicon": false,
+        "filename": "index.html",
+        "hash": false,
+        "inject": true,
+        "meta": Object {},
+        "minify": false,
+        "showErrors": true,
+        "template": "/Users/jankonopasek/Documents/repos/bundle-js/src/index.html.ejs",
+        "templateParameters": [Function],
+        "title": "Webpack App",
+        "xhtml": false,
       },
     },
     Object {

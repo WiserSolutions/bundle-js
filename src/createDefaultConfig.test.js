@@ -1,12 +1,12 @@
-import defaultConfig from './defaultConfig'
+import { createDefaultConfig } from './createDefaultConfig'
 
 const testableDefaultConfig = options => {
-  const config = defaultConfig({ context: '/path/to/pkg/src', output: { path: '/path/to/pkg/dist' }, ...options })
+  const config = createDefaultConfig({ context: '/path/to/pkg/src', output: { path: '/path/to/pkg/dist' }, ...options })
   delete config.plugins[0].definitions.__GIT_COMMIT__
   return config
 }
 
-describe('defaultConfig', () => {
+describe('createDefaultConfig', () => {
   it('creates default development config', () => {
     expect(testableDefaultConfig()).toMatchSnapshot()
   })

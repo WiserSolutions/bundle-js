@@ -4,6 +4,8 @@ import { DefinePlugin } from 'webpack'
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 import LiveReloadPlugin from 'webpack-livereload-plugin'
 import CompressionPlugin from 'compression-webpack-plugin'
+import HtmlPlugin from 'html-webpack-plugin'
+import FaviconPlugin from 'favicons-webpack-plugin'
 import flatten from 'lodash.flatten'
 import mapValues from 'lodash.mapvalues'
 
@@ -14,14 +16,19 @@ const MODE = {
   PRODUCTION: 'production'
 }
 
-module.exports = ({
+export const createDefaultConfig = ({
   mode = MODE.DEVELOPMENT,
   context = resolve('./src'),
   entry = './index.js',
+  rules = [],
   output = {
     path: resolve('./dist')
   },
+  htmlOptions = {},
+  favicon,
+  less = true,
   lessOptions = {},
+  watch,
   watchOptions = {
     ignored: ['node_modules', 'cypress', `${output.path}/**/*`]
   },
@@ -38,7 +45,7 @@ module.exports = ({
       filename: isDev ? 'bundle.js' : 'bundle-[hash].js',
       ...output
     },
-    watch: isDev,
+    watch: isDev && watch !== false,
     watchOptions,
     devtool: isDev ? 'inline-source-map' : undefined,
 
@@ -53,17 +60,21 @@ module.exports = ({
           test: /\.css$/,
           use: ['style-loader', 'css-loader']
         },
-        {
-          test: /\.less$/,
-          use: [
-            { loader: 'style-loader' },
-            { loader: 'css-loader' },
-            {
-              loader: 'less-loader',
-              options: lessOptions
-            }
-          ]
-        },
+        ...(less
+          ? [
+              {
+                test: /\.less$/,
+                use: [
+                  { loader: 'style-loader' },
+                  { loader: 'css-loader' },
+                  {
+                    loader: 'less-loader',
+                    options: lessOptions
+                  }
+                ]
+              }
+            ]
+          : []),
         {
           test: /\.svg$/,
           use: [
@@ -93,7 +104,8 @@ module.exports = ({
               }
             }
           ]
-        }
+        },
+        ...rules
       ]
     },
 
@@ -108,6 +120,11 @@ module.exports = ({
           ::JSON.stringify
         )
       ),
+      new HtmlPlugin({
+        template: resolve(__dirname, './index.html.ejs'),
+        ...htmlOptions
+      }),
+      ...(favicon ? [new FaviconPlugin({ logo: favicon, prefix: 'favicon-[hash]/', title: htmlOptions.title })] : []),
       ...(notify ? [new WebpackNotifierPlugin({ alwaysNotify: true })] : []),
       ...(isDev ? [new LiveReloadPlugin({ appendScriptTag: true })] : [new CompressionPlugin()]),
       ...plugins

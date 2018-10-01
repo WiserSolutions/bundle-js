@@ -1,5 +1,2 @@
-const defaultConfig = require('./defaultConfig')
-
-module.exports = {
-  defaultConfig
-}
+export * from './getGitCommit'
+export * from './createDefaultConfig'
