@@ -1,8 +1,16 @@
+import { resolve } from 'path'
+import get from 'lodash.get'
+import set from 'lodash.set'
+
 import { createDefaultConfig } from './createDefaultConfig'
 
+const root = resolve('./')
+const rebasePath = path => path.replace(root, '/path/to/pkg')
+const pathProps = ['context', 'output.path', 'plugins[1].options.template', 'watchOptions.ignored[2]']
 const testableDefaultConfig = options => {
-  const config = createDefaultConfig({ context: '/path/to/pkg/src', output: { path: '/path/to/pkg/dist' }, ...options })
-  delete config.plugins[0].definitions.__GIT_COMMIT__
+  const config = createDefaultConfig(options)
+  pathProps.forEach(prop => set(config, prop, rebasePath(get(config, prop))))
+  set(config, 'plugins[0].definitions.__GIT_COMMIT__', 'abcdef')
   return config
 }
 

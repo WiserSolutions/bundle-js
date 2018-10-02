@@ -109,6 +109,7 @@ Object {
   "plugins": Array [
     DefinePlugin {
       "definitions": Object {
+        "__GIT_COMMIT__": "abcdef",
         "__MODE__": "\\"development\\"",
         "__THEME__": "{\\"primaryColor\\":\\"indigo\\"}",
       },
@@ -127,7 +128,7 @@ Object {
         "meta": Object {},
         "minify": false,
         "showErrors": true,
-        "template": "/Users/jankonopasek/Documents/repos/bundle-js/src/index.html.ejs",
+        "template": "/path/to/pkg/src/index.html.ejs",
         "templateParameters": [Function],
         "title": "Webpack App",
         "xhtml": false,
@@ -266,6 +267,7 @@ Object {
   "plugins": Array [
     DefinePlugin {
       "definitions": Object {
+        "__GIT_COMMIT__": "abcdef",
         "__MODE__": "\\"development\\"",
       },
     },
@@ -283,7 +285,7 @@ Object {
         "meta": Object {},
         "minify": false,
         "showErrors": true,
-        "template": "/Users/jankonopasek/Documents/repos/bundle-js/src/index.html.ejs",
+        "template": "/path/to/pkg/src/index.html.ejs",
         "templateParameters": [Function],
         "title": "Webpack App",
         "xhtml": false,
@@ -426,6 +428,7 @@ Object {
   "plugins": Array [
     DefinePlugin {
       "definitions": Object {
+        "__GIT_COMMIT__": "abcdef",
         "__MODE__": "\\"production\\"",
       },
     },
@@ -443,7 +446,7 @@ Object {
         "meta": Object {},
         "minify": false,
         "showErrors": true,
-        "template": "/Users/jankonopasek/Documents/repos/bundle-js/src/index.html.ejs",
+        "template": "/path/to/pkg/src/index.html.ejs",
         "templateParameters": [Function],
         "title": "Webpack App",
         "xhtml": false,
