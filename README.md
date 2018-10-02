@@ -21,11 +21,10 @@ factory in `webpack.config.js` to create a custom bundle config:
 
 ```javascript
 const { createDefaultConfig } = require('@wisersolutions/bundle-js')
+const { loadAndResolveLessVars } = require('@hon2a/less-vars-to-js')
 const { resolve } = require('path')
 
-const theme = './theme.json'
-
-module.exports = env =>
+module.exports = async (env) =>
   createDefaultConfig({
     mode: env,
     //context: resolve('./src'),
@@ -35,18 +34,22 @@ module.exports = env =>
     htmlOptions: {
       title: 'My Cool App',
       base: '/'
+      // template: './src/index.html.ejs'
+      // ...
     },
     favicon: resolve('./src/logo.svg'),
     //less: true,
     lessOptions: {
-      modifyVars: theme
+      modifyVars: await loadAndResolveLessVars('./src/theme.less')
+      //plugins: []
+      // ...
     },
     //watch,
     //watchOptions: { ignored: ['node_modules', 'cypress', `${output.path}/**/*`] },
     //notify: true,
     inject: {
-      __THEME__: theme
-    },
+      __THEME__: await loadAndResolveLessVars('./src/variables.less')
+    }
     //plugins: []
   })
 ```
