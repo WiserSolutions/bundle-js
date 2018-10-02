@@ -58,6 +58,8 @@ Run `webpack` to build your app. If `mode` is set to `'development'`, the bundle
 in dev mode and stays running, watching & rebundling on changes. Otherwise it runs a single
 production build.
 
+When using the default `index` template, the application should be rendered into the `#root` element.
+
 ## Development
 
 ### Install
