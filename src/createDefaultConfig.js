@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import WebpackNotifierPlugin from 'webpack-notifier'
 import { DefinePlugin } from 'webpack'
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+import TerserPlugin from 'terser-webpack-plugin'
 import LiveReloadPlugin from 'webpack-livereload-plugin'
 import CompressionPlugin from 'compression-webpack-plugin'
 import HtmlPlugin from 'html-webpack-plugin'
@@ -132,11 +132,10 @@ export const createDefaultConfig = ({
 
     optimization: {
       minimizer: [
-        new UglifyJsPlugin({
-          uglifyOptions: {
+        new TerserPlugin({
+          terserOptions: {
             ecma: 6
-          },
-          sourceMap: false
+          }
         })
       ]
     }
