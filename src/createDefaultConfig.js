@@ -5,7 +5,6 @@ import TerserPlugin from 'terser-webpack-plugin'
 import LiveReloadPlugin from 'webpack-livereload-plugin'
 import CompressionPlugin from 'compression-webpack-plugin'
 import HtmlPlugin from 'html-webpack-plugin'
-import FaviconPlugin from 'favicons-webpack-plugin'
 import flatten from 'lodash.flatten'
 import mapValues from 'lodash.mapvalues'
 
@@ -124,7 +123,6 @@ export const createDefaultConfig = ({
         template: resolve(__dirname, './index.html.ejs'),
         ...htmlOptions
       }),
-      ...(favicon ? [new FaviconPlugin({ logo: favicon, prefix: 'favicon-[hash]/', title: htmlOptions.title })] : []),
       ...(notify ? [new WebpackNotifierPlugin({ alwaysNotify: true })] : []),
       ...(isDev ? [new LiveReloadPlugin({ appendScriptTag: true })] : [new CompressionPlugin()]),
       ...plugins

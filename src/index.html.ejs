@@ -1,9 +1,10 @@
-<!DOCTYPE html><% const { base, title } = htmlWebpackPlugin.options %>
+<!DOCTYPE html><% const { base, title, head = '' } = htmlWebpackPlugin.options %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <% if (base) { %><base href="<%= base %>"><% } %>
     <title><%= title %></title>
+    <%= head %>
 </head>
 <body>
     <div id="root"></div>
