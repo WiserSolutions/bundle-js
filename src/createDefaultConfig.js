@@ -23,8 +23,8 @@ export const createDefaultConfig = ({
   output = {
     path: resolve('./dist')
   },
+  html = true,
   htmlOptions = {},
-  favicon,
   less = true,
   lessOptions = {},
   watch,
@@ -119,10 +119,14 @@ export const createDefaultConfig = ({
           ::JSON.stringify
         )
       ),
-      new HtmlPlugin({
-        template: resolve(__dirname, './index.html.ejs'),
-        ...htmlOptions
-      }),
+      ...(html
+        ? [
+            new HtmlPlugin({
+              template: resolve(__dirname, './index.html.ejs'),
+              ...htmlOptions
+            })
+          ]
+        : []),
       ...(notify ? [new WebpackNotifierPlugin({ alwaysNotify: true })] : []),
       ...(isDev ? [new LiveReloadPlugin({ appendScriptTag: true })] : [new CompressionPlugin()]),
       ...plugins
