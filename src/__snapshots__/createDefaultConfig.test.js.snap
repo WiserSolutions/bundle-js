@@ -84,6 +84,7 @@ Object {
         "options": Object {
           "cache": false,
           "cacheKeys": [Function],
+          "chunkFilter": [Function],
           "exclude": undefined,
           "extractComments": false,
           "include": undefined,
@@ -96,7 +97,7 @@ Object {
               "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/i,
             },
           },
-          "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+          "test": /\\\\\\.m\\?js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
           "warningsFilter": [Function],
         },
       },
@@ -135,9 +136,11 @@ Object {
       },
     },
     LiveReloadPlugin {
+      "defaultPort": 35729,
       "delay": 0,
       "hostname": "\\" + location.hostname + \\"",
       "ignore": null,
+      "instanceId": "00d3c0dc1ff69c7e",
       "lastChildHashes": Array [],
       "lastHash": null,
       "options": Object {
@@ -242,6 +245,7 @@ Object {
         "options": Object {
           "cache": false,
           "cacheKeys": [Function],
+          "chunkFilter": [Function],
           "exclude": undefined,
           "extractComments": false,
           "include": undefined,
@@ -254,7 +258,7 @@ Object {
               "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/i,
             },
           },
-          "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+          "test": /\\\\\\.m\\?js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
           "warningsFilter": [Function],
         },
       },
@@ -299,9 +303,11 @@ Object {
       },
     },
     LiveReloadPlugin {
+      "defaultPort": 35729,
       "delay": 0,
       "hostname": "\\" + location.hostname + \\"",
       "ignore": null,
+      "instanceId": "177a6e4cddcb03b4",
       "lastChildHashes": Array [],
       "lastHash": null,
       "options": Object {
@@ -403,6 +409,7 @@ Object {
         "options": Object {
           "cache": false,
           "cacheKeys": [Function],
+          "chunkFilter": [Function],
           "exclude": undefined,
           "extractComments": false,
           "include": undefined,
@@ -415,7 +422,7 @@ Object {
               "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/i,
             },
           },
-          "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+          "test": /\\\\\\.m\\?js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
           "warningsFilter": [Function],
         },
       },
