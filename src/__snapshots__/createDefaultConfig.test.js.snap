@@ -58,6 +58,9 @@ Object {
                   Object {
                     "removeTitle": false,
                   },
+                  Object {
+                    "removeViewBox": false,
+                  },
                 ],
               },
             },
@@ -140,7 +143,7 @@ Object {
       "delay": 0,
       "hostname": "\\" + location.hostname + \\"",
       "ignore": null,
-      "instanceId": "00d3c0dc1ff69c7e",
+      "instanceId": "__DYNAMIC__",
       "lastChildHashes": Array [],
       "lastHash": null,
       "options": Object {
@@ -218,6 +221,9 @@ Object {
                 "plugins": Array [
                   Object {
                     "removeTitle": false,
+                  },
+                  Object {
+                    "removeViewBox": false,
                   },
                 ],
               },
@@ -307,7 +313,7 @@ Object {
       "delay": 0,
       "hostname": "\\" + location.hostname + \\"",
       "ignore": null,
-      "instanceId": "177a6e4cddcb03b4",
+      "instanceId": "__DYNAMIC__",
       "lastChildHashes": Array [],
       "lastHash": null,
       "options": Object {
@@ -382,6 +388,9 @@ Object {
                 "plugins": Array [
                   Object {
                     "removeTitle": false,
+                  },
+                  Object {
+                    "removeViewBox": false,
                   },
                 ],
               },

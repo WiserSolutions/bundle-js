@@ -10,6 +10,9 @@ const pathProps = ['context', 'output.path', 'plugins[1].options.template', 'wat
 const testableDefaultConfig = options => {
   const config = createDefaultConfig(options)
   pathProps.forEach(prop => set(config, prop, rebasePath(get(config, prop))))
+  config.plugins.forEach((plugin, idx) => {
+    if (plugin.instanceId) set(config, `plugins[${idx}].instanceId`, '__DYNAMIC__')
+  })
   set(config, 'plugins[0].definitions.__GIT_COMMIT__', 'abcdef')
   return config
 }

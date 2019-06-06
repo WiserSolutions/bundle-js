@@ -84,7 +84,7 @@ export const createDefaultConfig = ({
               loader: 'react-svg-loader',
               options: {
                 svgo: {
-                  plugins: [{ removeTitle: false }],
+                  plugins: [{ removeTitle: false }, { removeViewBox: false }],
                   floatPrecision: 2
                 }
               }
