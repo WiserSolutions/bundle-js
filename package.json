@@ -1,6 +1,6 @@
 {
   "name": "@wisersolutions/bundle-js",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Provides default Webpack config and build scripts for other packages",
   "repository": {
     "type": "git",
