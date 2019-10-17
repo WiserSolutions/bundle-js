@@ -4,7 +4,7 @@
   "description": "Provides default Webpack config and build scripts for other packages",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WisePricer/bundle-js"
+    "url": "git+https://github.com/WiserSolutions/bundle-js"
   },
   "author": "Wiser Solutions, Inc.",
   "contributors": [
