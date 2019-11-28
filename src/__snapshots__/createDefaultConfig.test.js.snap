@@ -85,20 +85,17 @@ Object {
     "minimizer": Array [
       TerserPlugin {
         "options": Object {
-          "cache": false,
+          "cache": true,
           "cacheKeys": [Function],
           "chunkFilter": [Function],
           "exclude": undefined,
-          "extractComments": false,
+          "extractComments": true,
           "include": undefined,
           "minify": undefined,
-          "parallel": false,
-          "sourceMap": false,
+          "parallel": true,
+          "sourceMap": undefined,
           "terserOptions": Object {
             "ecma": 6,
-            "output": Object {
-              "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/i,
-            },
           },
           "test": /\\\\\\.m\\?js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
           "warningsFilter": [Function],
@@ -249,20 +246,17 @@ Object {
     "minimizer": Array [
       TerserPlugin {
         "options": Object {
-          "cache": false,
+          "cache": true,
           "cacheKeys": [Function],
           "chunkFilter": [Function],
           "exclude": undefined,
-          "extractComments": false,
+          "extractComments": true,
           "include": undefined,
           "minify": undefined,
-          "parallel": false,
-          "sourceMap": false,
+          "parallel": true,
+          "sourceMap": undefined,
           "terserOptions": Object {
             "ecma": 6,
-            "output": Object {
-              "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/i,
-            },
           },
           "test": /\\\\\\.m\\?js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
           "warningsFilter": [Function],
@@ -416,20 +410,17 @@ Object {
     "minimizer": Array [
       TerserPlugin {
         "options": Object {
-          "cache": false,
+          "cache": true,
           "cacheKeys": [Function],
           "chunkFilter": [Function],
           "exclude": undefined,
-          "extractComments": false,
+          "extractComments": true,
           "include": undefined,
           "minify": undefined,
-          "parallel": false,
-          "sourceMap": false,
+          "parallel": true,
+          "sourceMap": undefined,
           "terserOptions": Object {
             "ecma": 6,
-            "output": Object {
-              "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/i,
-            },
           },
           "test": /\\\\\\.m\\?js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
           "warningsFilter": [Function],
