@@ -150,6 +150,8 @@ Object {
       "protocol": "",
       "quiet": false,
       "server": null,
+      "sourceHashs": Object {},
+      "useSourceHash": false,
     },
     Object {
       "custom": "webpack plugin",
@@ -295,7 +297,7 @@ Object {
         "xhtml": false,
       },
     },
-    Object {
+    WebpackNotifierPlugin {
       "isFirstBuild": true,
       "lastBuildSucceeded": false,
       "options": Object {
@@ -317,6 +319,8 @@ Object {
       "protocol": "",
       "quiet": false,
       "server": null,
+      "sourceHashs": Object {},
+      "useSourceHash": false,
     },
   ],
   "watch": true,
@@ -459,7 +463,7 @@ Object {
         "xhtml": false,
       },
     },
-    Object {
+    WebpackNotifierPlugin {
       "isFirstBuild": true,
       "lastBuildSucceeded": false,
       "options": Object {
