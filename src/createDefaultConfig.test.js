@@ -6,7 +6,7 @@ import { createDefaultConfig } from './createDefaultConfig'
 
 const root = resolve('./')
 const rebasePath = path => path.replace(root, '/path/to/pkg')
-const pathProps = ['context', 'output.path', 'plugins[1].options.template', 'watchOptions.ignored[2]']
+const pathProps = ['context', 'output.path', 'plugins[1].userOptions.template', 'watchOptions.ignored[2]']
 const testableDefaultConfig = options => {
   const config = createDefaultConfig(options)
   pathProps.forEach(prop => set(config, prop, rebasePath(get(config, prop))))
