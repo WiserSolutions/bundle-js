@@ -36,8 +36,10 @@ Object {
           Object {
             "loader": "less-loader",
             "options": Object {
-              "modifyVars": Object {
-                "primaryColor": "indigo",
+              "lessOptions": Object {
+                "modifyVars": Object {
+                  "primaryColor": "indigo",
+                },
               },
             },
           },
@@ -186,7 +188,9 @@ Object {
           },
           Object {
             "loader": "less-loader",
-            "options": Object {},
+            "options": Object {
+              "lessOptions": Object {},
+            },
           },
         ],
       },
@@ -336,7 +340,9 @@ Object {
           },
           Object {
             "loader": "less-loader",
-            "options": Object {},
+            "options": Object {
+              "lessOptions": Object {},
+            },
           },
         ],
       },

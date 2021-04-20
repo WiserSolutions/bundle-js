@@ -68,7 +68,7 @@ export const createDefaultConfig = ({
                   { loader: 'css-loader' },
                   {
                     loader: 'less-loader',
-                    options: lessOptions
+                    options: { lessOptions }
                   }
                 ]
               }
