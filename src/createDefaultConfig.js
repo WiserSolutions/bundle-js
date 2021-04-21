@@ -27,7 +27,6 @@ export const createDefaultConfig = ({
   htmlOptions = {},
   less = true,
   lessOptions = {},
-  watch,
   watchOptions = {
     ignored: ['node_modules', 'cypress', `${output.path}/**/*`]
   },
@@ -41,10 +40,9 @@ export const createDefaultConfig = ({
     context,
     entry: flatten(['@babel/polyfill', entry]),
     output: {
-      filename: isDev ? 'bundle.js' : 'bundle-[hash].js',
+      filename: isDev ? 'bundle.js' : 'bundle-[contenthash].js',
       ...output
     },
-    watch: isDev && watch !== false,
     watchOptions,
     devtool: isDev ? 'inline-source-map' : undefined,
 
@@ -94,15 +92,10 @@ export const createDefaultConfig = ({
         {
           // image & font loader (base64 with fallback)
           test: /\.jpe?g$|\.gif$|\.png$|\.wav$|\.mp3|\.woff$|\.woff2$|\.otf$|\.eot$|\.ttf$/,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 25000,
-                name: '[path][name].[hash].[ext]'
-              }
-            }
-          ]
+          type: 'asset',
+          generator: {
+            filename: '[path][name].[contenthash].[ext]'
+          }
         },
         ...rules
       ]

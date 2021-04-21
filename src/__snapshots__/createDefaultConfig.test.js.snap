@@ -70,16 +70,11 @@ Object {
         ],
       },
       Object {
+        "generator": Object {
+          "filename": "[path][name].[contenthash].[ext]",
+        },
         "test": /\\\\\\.jpe\\?g\\$\\|\\\\\\.gif\\$\\|\\\\\\.png\\$\\|\\\\\\.wav\\$\\|\\\\\\.mp3\\|\\\\\\.woff\\$\\|\\\\\\.woff2\\$\\|\\\\\\.otf\\$\\|\\\\\\.eot\\$\\|\\\\\\.ttf\\$/,
-        "use": Array [
-          Object {
-            "loader": "url-loader",
-            "options": Object {
-              "limit": 25000,
-              "name": "[path][name].[hash].[ext]",
-            },
-          },
-        ],
+        "type": "asset",
       },
     ],
   },
@@ -143,7 +138,6 @@ Object {
       "custom": "webpack plugin",
     },
   ],
-  "watch": true,
   "watchOptions": Object {
     "ignored": Array [
       "node_modules",
@@ -219,16 +213,11 @@ Object {
         ],
       },
       Object {
+        "generator": Object {
+          "filename": "[path][name].[contenthash].[ext]",
+        },
         "test": /\\\\\\.jpe\\?g\\$\\|\\\\\\.gif\\$\\|\\\\\\.png\\$\\|\\\\\\.wav\\$\\|\\\\\\.mp3\\|\\\\\\.woff\\$\\|\\\\\\.woff2\\$\\|\\\\\\.otf\\$\\|\\\\\\.eot\\$\\|\\\\\\.ttf\\$/,
-        "use": Array [
-          Object {
-            "loader": "url-loader",
-            "options": Object {
-              "limit": 25000,
-              "name": "[path][name].[hash].[ext]",
-            },
-          },
-        ],
+        "type": "asset",
       },
     ],
   },
@@ -295,7 +284,6 @@ Object {
       "webpack": null,
     },
   ],
-  "watch": true,
   "watchOptions": Object {
     "ignored": Array [
       "node_modules",
@@ -371,16 +359,11 @@ Object {
         ],
       },
       Object {
+        "generator": Object {
+          "filename": "[path][name].[contenthash].[ext]",
+        },
         "test": /\\\\\\.jpe\\?g\\$\\|\\\\\\.gif\\$\\|\\\\\\.png\\$\\|\\\\\\.wav\\$\\|\\\\\\.mp3\\|\\\\\\.woff\\$\\|\\\\\\.woff2\\$\\|\\\\\\.otf\\$\\|\\\\\\.eot\\$\\|\\\\\\.ttf\\$/,
-        "use": Array [
-          Object {
-            "loader": "url-loader",
-            "options": Object {
-              "limit": 25000,
-              "name": "[path][name].[hash].[ext]",
-            },
-          },
-        ],
+        "type": "asset",
       },
     ],
   },
@@ -402,7 +385,7 @@ Object {
     ],
   },
   "output": Object {
-    "filename": "bundle-[hash].js",
+    "filename": "bundle-[contenthash].js",
     "path": "/path/to/pkg/dist",
   },
   "plugins": Array [
@@ -442,7 +425,6 @@ Object {
       },
     },
   ],
-  "watch": false,
   "watchOptions": Object {
     "ignored": Array [
       "node_modules",
