@@ -27,6 +27,7 @@ export const createDefaultConfig = ({
   htmlOptions = {},
   less = true,
   lessOptions = {},
+  watch,
   watchOptions = {
     ignored: ['node_modules', 'cypress', `${output.path}/**/*`]
   },
@@ -43,6 +44,7 @@ export const createDefaultConfig = ({
       filename: isDev ? 'bundle.js' : 'bundle-[contenthash].js',
       ...output
     },
+    watch: isDev && watch !== false,
     watchOptions,
     devtool: isDev ? 'inline-source-map' : undefined,
 

@@ -138,6 +138,7 @@ Object {
       "custom": "webpack plugin",
     },
   ],
+  "watch": true,
   "watchOptions": Object {
     "ignored": Array [
       "node_modules",
@@ -284,6 +285,7 @@ Object {
       "webpack": null,
     },
   ],
+  "watch": true,
   "watchOptions": Object {
     "ignored": Array [
       "node_modules",
@@ -425,6 +427,7 @@ Object {
       },
     },
   ],
+  "watch": false,
   "watchOptions": Object {
     "ignored": Array [
       "node_modules",
