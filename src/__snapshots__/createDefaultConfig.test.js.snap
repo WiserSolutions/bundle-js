@@ -94,6 +94,9 @@ Object {
         },
       },
     ],
+    "splitChunks": Object {
+      "chunks": "all",
+    },
   },
   "output": Object {
     "filename": "bundle.js",
@@ -238,6 +241,9 @@ Object {
         },
       },
     ],
+    "splitChunks": Object {
+      "chunks": "all",
+    },
   },
   "output": Object {
     "filename": "bundle.js",
@@ -385,6 +391,9 @@ Object {
         },
       },
     ],
+    "splitChunks": Object {
+      "chunks": "all",
+    },
   },
   "output": Object {
     "filename": "bundle-[contenthash].js",

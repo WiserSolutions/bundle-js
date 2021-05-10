@@ -134,7 +134,10 @@ export const createDefaultConfig = ({
             ecma: 6
           }
         })
-      ]
+      ],
+      splitChunks: {
+        chunks: 'all'
+      }
     }
   }
 }
