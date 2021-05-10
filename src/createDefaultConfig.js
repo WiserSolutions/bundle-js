@@ -33,7 +33,8 @@ export const createDefaultConfig = ({
   },
   notify = true,
   inject = {},
-  plugins = []
+  plugins = [],
+  optimization = {}
 } = {}) => {
   const isDev = mode === MODE.DEVELOPMENT
   return {
@@ -137,7 +138,8 @@ export const createDefaultConfig = ({
       ],
       splitChunks: {
         chunks: 'all'
-      }
+      },
+      ...optimization
     }
   }
 }
