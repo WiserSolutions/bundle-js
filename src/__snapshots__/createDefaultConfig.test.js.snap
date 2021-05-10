@@ -99,7 +99,7 @@ Object {
     },
   },
   "output": Object {
-    "filename": "bundle.js",
+    "filename": "[name].bundle.js",
     "path": "/path/to/pkg/build",
   },
   "plugins": Array [
@@ -246,7 +246,7 @@ Object {
     },
   },
   "output": Object {
-    "filename": "bundle.js",
+    "filename": "[name].bundle.js",
     "path": "/path/to/pkg/dist",
   },
   "plugins": Array [
@@ -396,7 +396,7 @@ Object {
     },
   },
   "output": Object {
-    "filename": "bundle-[contenthash].js",
+    "filename": "[name].[contenthash].bundle.js",
     "path": "/path/to/pkg/dist",
   },
   "plugins": Array [

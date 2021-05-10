@@ -42,7 +42,7 @@ export const createDefaultConfig = ({
     context,
     entry: flatten(['@babel/polyfill', entry]),
     output: {
-      filename: isDev ? 'bundle.js' : 'bundle-[contenthash].js',
+      filename: isDev ? '[name].bundle.js' : '[name].[contenthash].bundle.js',
       ...output
     },
     watch: isDev && watch !== false,
